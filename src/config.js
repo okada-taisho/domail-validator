@@ -21,6 +21,23 @@ export class MailcheckConfig {
     return this.topLevelDomains;
   }
 
+  addDomain(domain) {
+    if (!this.domains.includes(domain)) {
+      this.domains.push(domain);
+    }
+  }
+
+  addSecondLevelDomain(domain) {
+    if (!this.secondLevelDomains.includes(domain)) {
+      this.secondLevelDomains.push(domain);
+    }
+  }
+
+  addTopLevelDomain(domain) {
+    if (!this.topLevelDomains.includes(domain)) {
+      this.topLevelDomains.push(domain);
+    }
+  }
 }
 
 export const defaultConfig = new MailcheckConfig();
