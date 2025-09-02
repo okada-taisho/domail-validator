@@ -16,7 +16,7 @@ npm run build
 ```html
 
 <head>
-    <script src="./dist/bundle.js"></script>
+    <script src="./dist/mailcheck.min.js"></script>
 </head>
 ```
 
@@ -55,7 +55,7 @@ export const domains = [
 ### オプション設定
 
 ```javascript
-import { MailcheckLibrary } from './dist/bundle.js';
+import { MailcheckLibrary } from './dist/mailcheck.min.js';
 
 // カスタム設定で初期化
 new MailcheckLibrary({

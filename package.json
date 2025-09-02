@@ -2,11 +2,13 @@
   "name": "mailcheck-library",
   "version": "1.0.0",
   "description": "A library that automatically checks email spelling with HTML class attributes",
-  "main": "dist/bundle.js",
+  "main": "dist/mailcheck.min.js",
   "scripts": {
     "build": "webpack",
     "dev": "webpack --mode development --watch",
-    "serve": "npx http-server ."
+    "serve": "npx http-server .",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "mailcheck": "^1.1.1"
@@ -14,8 +16,20 @@
   "devDependencies": {
     "@babel/core": "^7.22.0",
     "@babel/preset-env": "^7.22.0",
+    "@testing-library/jest-dom": "^5.17.0",
     "babel-loader": "^9.1.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "webpack": "^5.88.0",
     "webpack-cli": "^5.1.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
   }
 }

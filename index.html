@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Mailcheck ライブラリ サンプル</title>
+<script src="./dist/mailcheck.min.js"></script>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .js-mailcheck-suggestion {
+    color: #d9534f;
+    margin-top: 5px;
+    font-size: 0.9em;
+  }
+  
+  .js-mailcheck-suggested {
+    color: #337ab7;
+    text-decoration: none;
+  }
+  
+  .js-mailcheck-suggested:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<h1>Mailcheck ライブラリ サンプル</h1>
+
+<div class="form-group">
+  <label for="email1">メールアドレス 1 (自動チェック):</label>
+  <input id="email1" name="email1" type="email" class="js-mailcheck-input" placeholder="例: user@gmai.com" />
+</div>
+
+<div class="form-group">
+  <label for="email2">メールアドレス 2 (自動チェック):</label>
+  <input id="email2" name="email2" type="email" class="js-mailcheck-input" placeholder="例: test@yahoo.co" />
+</div>
+
+<div class="form-group">
+  <label for="email3">メールアドレス 3 (通常の入力欄):</label>
+  <input id="email3" name="email3" type="email" placeholder="チェック機能なし" />
+</div>
+
+<p><strong>使い方:</strong> <code>js-mailcheck-input</code> クラスが付いた入力欄でメールアドレスを入力し、フォーカスを外すと自動的にスペルチェックが実行されます。</p>
+
+</body>
+</html>
