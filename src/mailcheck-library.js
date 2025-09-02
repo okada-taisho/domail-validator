@@ -9,7 +9,7 @@ class MailcheckLibrary {
       domains: defaultConfig.getDomains(),
       secondLevelDomains: defaultConfig.getSecondLevelDomains(),
       topLevelDomains: defaultConfig.getTopLevelDomains(),
-      suggestionTemplate: '💡 もしかして、「<a href="#" class="js-mailcheck-suggested">{suggestion}</a>」でしょうか？'
+      suggestionTemplate: 'もしかして、「<a href="#" class="js-mailcheck-suggested">{suggestion}</a>」でしょうか？'
     }, options);
 
     this.init();
@@ -56,15 +56,17 @@ class MailcheckLibrary {
     suggestionDiv.style.width = '100%';
     suggestionDiv.style.height = '100%';
     suggestionDiv.style.color = '#666';
-    suggestionDiv.style.fontSize = '13px';
+    suggestionDiv.style.fontSize = 'clamp(11px, 2.5vw, 13px)';
     suggestionDiv.style.display = 'flex';
     suggestionDiv.style.alignItems = 'center';
     suggestionDiv.style.backgroundColor = '#f8f9fa';
     suggestionDiv.style.border = '1px solid #e9ecef';
     suggestionDiv.style.borderRadius = '4px';
-    suggestionDiv.style.padding = '0 12px';
+    suggestionDiv.style.padding = '0 clamp(8px, 3vw, 12px)';
     suggestionDiv.style.boxSizing = 'border-box';
     suggestionDiv.style.transition = 'all 0.2s ease';
+    suggestionDiv.style.wordBreak = 'break-all';
+    suggestionDiv.style.overflow = 'hidden';
     
     spacer.appendChild(suggestionDiv);
     input.parentNode.insertBefore(spacer, input.nextSibling);
@@ -108,10 +110,11 @@ class MailcheckLibrary {
       suggestionLink.style.color = '#007bff';
       suggestionLink.style.textDecoration = 'none';
       suggestionLink.style.fontWeight = '500';
-      suggestionLink.style.padding = '2px 6px';
+      suggestionLink.style.padding = 'clamp(2px, 1vw, 4px) clamp(4px, 1.5vw, 6px)';
       suggestionLink.style.borderRadius = '3px';
       suggestionLink.style.backgroundColor = '#e3f2fd';
       suggestionLink.style.transition = 'all 0.15s ease';
+      suggestionLink.style.fontSize = 'clamp(11px, 2.5vw, 13px)';
       
       // ホバー効果
       suggestionLink.addEventListener('mouseenter', () => {
