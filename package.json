@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "メールアドレスのタイポを検出・修正提案する軽量JSライブラリ。Gmail、Yahoo、Outlookなど主要ドメインの入力ミスを自動検出",
   "main": "dist/mailcheck.min.js",
-  "author": "あなたの名前",
+  "author": "okada-taisho",
   "license": "MIT",
   "keywords": [
     "email",
