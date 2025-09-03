@@ -1,8 +1,29 @@
 {
-  "name": "mailcheck-library",
+  "name": "domailcheck",
   "version": "1.0.0",
-  "description": "A library that automatically checks email spelling with HTML class attributes",
+  "description": "メールアドレスのタイポを検出・修正提案する軽量JSライブラリ。Gmail、Yahoo、Outlookなど主要ドメインの入力ミスを自動検出",
   "main": "dist/mailcheck.min.js",
+  "author": "あなたの名前",
+  "license": "MIT",
+  "keywords": [
+    "email",
+    "validation",
+    "mailcheck",
+    "typo",
+    "correction",
+    "domain",
+    "メール",
+    "バリデーション",
+    "タイポ検出"
+  ],
+  "homepage": "https://github.com/okada-taisho/domail-validator",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okada-taisho/domail-validator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/okada-taisho/domail-validator/issues"
+  },
   "scripts": {
     "build": "webpack",
     "dev": "webpack --mode development --watch",
